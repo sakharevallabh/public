@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PipChat – Legal & Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card-bg: #0b1220;
+      --accent: #f59e0b;
+      --accent-soft: rgba(245, 158, 11, 0.1);
+      --accent-strong: #d97706;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --danger: #ef4444;
+      --green: #22c55e;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 58%, #020617 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.85),
+        rgba(15, 23, 42, 0.7),
+        transparent
+      );
+      border-bottom: 1px solid rgba(55, 65, 81, 0.7);
+    }
+
+    .shell {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 16px 20px 40px 20px;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+    }
+
+    .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 16px;
+      background: radial-gradient(circle at 20% 20%, #fed7aa, #f97316);
+      box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 18px;
+      color: #0f172a;
+    }
+
+    .logo-text-main {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .meta-pill {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(75, 85, 99, 0.8);
+      font-size: 11px;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.4);
+    }
+
+    main {
+      margin-top: 12px;
+    }
+
+    .page-title {
+      margin-top: 16px;
+      margin-bottom: 18px;
+    }
+
+    .page-title h1 {
+      font-size: 22px;
+      margin: 0 0 6px 0;
+      letter-spacing: 0.03em;
+    }
+
+    .page-title .subtitle {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .page-title .motto {
+      font-size: 13px;
+      margin-top: 6px;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .page-title .tagline {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.9);
+      font-size: 11px;
+      padding: 4px 12px;
+      color: var(--muted);
+    }
+
+    .pill strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* nav */
+    .nav-card {
+      margin-top: 16px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.9)
+      );
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      box-shadow: var(--shadow-soft);
+      padding: 14px 14px 12px;
+    }
+
+    .nav-card h2 {
+      font-size: 14px;
+      margin: 0 0 8px 0;
+      color: var(--muted);
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    @media (min-width: 720px) {
+      .nav-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 99px;
+      border: 1px solid rgba(55, 65, 81, 0.85);
+      background: radial-gradient(circle at 0 0, rgba(148,163,184,0.12), transparent);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .nav-link span.icon-badge {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(75,85,99,0.9);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--accent);
+    }
+
+    .nav-link strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .nav-link small {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    /* section cards */
+    section.policy-section {
+      margin-top: 24px;
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(55, 65, 81, 0.85);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 16px 16px;
+    }
+
+    section.policy-section h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 18px;
+      letter-spacing: 0.02em;
+    }
+
+    section.policy-section h3 {
+      margin-top: 16px;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    section.policy-section p {
+      font-size: 13px;
+      margin: 4px 0;
+      color: var(--text);
+    }
+
+    section.policy-section ul {
+      padding-left: 18px;
+      margin: 4px 0 8px 0;
+    }
+
+    section.policy-section li {
+      font-size: 13px;
+      margin: 3px 0;
+      color: var(--text);
+    }
+
+    .badge-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-soft);
+      border: 1px solid rgba(245, 158, 11, 0.7);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .badge-label span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .callout {
+      margin-top: 8px;
+      padding: 8px 10px;
+      border-radius: var(--radius-md);
+      border: 1px dashed rgba(148, 163, 184, 0.8);
+      background: rgba(15, 23, 42, 0.85);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .callout strong {
+      color: var(--accent);
+    }
+
+    .table-wrapper {
+      margin-top: 10px;
+      overflow-x: auto;
+    }
+
+    table.policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      color: var(--text);
+      min-width: 600px;
+    }
+
+    table.policy-table th,
+    table.policy-table td {
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      padding: 6px 8px;
+      vertical-align: top;
+    }
+
+    table.policy-table th {
+      background: rgba(15, 23, 42, 1);
+      font-weight: 600;
+    }
+
+    table.policy-table tbody tr:nth-child(odd) {
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    table.policy-table tbody tr:nth-child(even) {
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(55, 65, 81, 0.8);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-row a {
+      font-size: 11px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <div class="top-bar">
+        <div class="logo-block">
+          <div class="logo-mark">P</div>
+          <div>
+            <div class="logo-text-main">PipChat</div>
+            <div class="logo-text-sub">
+              Publicly Interactive Post Chat · For the people, By the people
+            </div>
+          </div>
+        </div>
+        <div class="meta-pill">
+          <span class="meta-dot"></span>
+          <span>Last updated: <strong>[INSERT DATE]</strong></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="shell">
+      <div class="page-title">
+        <h1>Legal, Privacy & Safety Center</h1>
+        <div class="subtitle">
+          This page describes how PipChat by ScatterBrain works, your rights, and your responsibilities when using the app.
+        </div>
+        <div class="motto">Motto: For the people, By the people.</div>
+        <div class="tagline">Product: PipChat – Publicly Interactive Post Chat.</div>
+
+        <div class="pill-row">
+          <div class="pill"><strong>Controller:</strong> ScatterBrain</div>
+          <div class="pill"><strong>Support:</strong> scatterbrain@gmail.com</div>
+          <div class="pill"><strong>Scope:</strong> PipChat mobile applications & related services</div>
+        </div>
+      </div>
+
+      <div class="nav-card">
+        <h2>Jump to a section</h2>
+        <div class="nav-grid">
+          <a href="#terms-of-service" class="nav-link">
+            <span class="icon-badge">TOS</span>
+            <div>
+              <strong>Terms of Service</strong>
+              <small>What you agree to when using PipChat</small>
+            </div>
+          </a>
+          <a href="#privacy-policy" class="nav-link">
+            <span class="icon-badge">PP</span>
+            <div>
+              <strong>Privacy Policy</strong>
+              <small>What data we collect & how we use it</small>
+            </div>
+          </a>
+          <a href="#posting-policy" class="nav-link">
+            <span class="icon-badge">POST</span>
+            <div>
+              <strong>Posting Policy</strong>
+              <small>What you can and cannot post</small>
+            </div>
+          </a>
+          <a href="#moderation-policy" class="nav-link">
+            <span class="icon-badge">MOD</span>
+            <div>
+              <strong>Content Moderation</strong>
+              <small>How we enforce rules & handle reports</small>
+            </div>
+          </a>
+          <a href="#data-retention" class="nav-link">
+            <span class="icon-badge">DR</span>
+            <div>
+              <strong>Data Retention</strong>
+              <small>How long different data is stored</small>
+            </div>
+          </a>
+          <a href="#cookie-policy" class="nav-link">
+            <span class="icon-badge">CK</span>
+            <div>
+              <strong>Cookie & Tracking</strong>
+              <small>How we use identifiers & analytics</small>
+            </div>
+          </a>
+          <a href="#age-policy" class="nav-link">
+            <span class="icon-badge">AGE</span>
+            <div>
+              <strong>Age-Gated Access</strong>
+              <small>Parent accounts & minor safety</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 1. TERMS OF SERVICE -->
+      <section id="terms-of-service" class="policy-section">
+        <div class="badge-label"><span class="dot"></span> Core Agreement</div>
+        <h2>1. Terms of Service</h2>
+        <p>
+          These Terms of Service (“<strong>Terms</strong>”) govern your use of
+          <strong>PipChat – Publicly Interactive Post Chat</strong> (the “<strong>App</strong>”)
+          and any related websites, services, or tools operated by
+          <strong>ScatterBrain</strong> (“<strong>we</strong>”, “<strong>us</strong>”, “<strong>our</strong>”).
+          By creating an account or using PipChat, you agree to these Terms.
+        </p>
+
+        <h3>1.1 Eligibility & Account Creation</h3>
+        <p>
+          To use PipChat you must be legally allowed to enter into a binding agreement in your jurisdiction.
+          Minors may only use PipChat under the conditions described in the
+          <a href="#age-policy">Age-Gated Access Policy</a>.
+        </p>
+        <ul>
+          <li>You must provide accurate information during registration (including email, phone, birth year).</li>
+          <li>You must keep your login credentials secure and not share them with others.</li>
+          <li>You are responsible for all activity under your account.</li>
+        </ul>
+
+        <h3>1.2 Parent-Linked Minor Accounts</h3>
+        <p>
+          If your birth year indicates that you are a minor (under 18), you may only use PipChat with a
+          <strong>linked parent or guardian account</strong> who has explicitly approved your account and your posts.
+          Additional age restrictions apply:
+        </p>
+        <ul>
+          <li>
+            <strong>Under 16:</strong> You cannot create replies/comments. You may only post if a linked parent/guardian
+            approves your account and each post.
+          </li>
+          <li>
+            <strong>16–17:</strong> You may have a PipChat account linked to a parent/guardian. Post creation may require
+            parent approval based on app settings and applicable law.
+          </li>
+          <li>
+            Parent/guardian accounts must be created by adults who take legal responsibility for the minor’s use.
+          </li>
+        </ul>
+        <p>
+          We may take steps (including account suspension) if we discover an account misrepresenting age or failing
+          to comply with these age rules.
+        </p>
+
+        <h3>1.3 Service Description & Ephemeral Content</h3>
+        <p>
+          PipChat is a public, time-bound social platform for sharing posts, threads, community discussions, and chats.
+          Certain content types (posts, communities, chat threads) automatically expire based on:
+        </p>
+        <ul>
+          <li>The user’s subscription plan or account type.</li>
+          <li>Platform-wide lifetime rules (e.g., within a few days).</li>
+          <li>Moderation actions and safety flags which may accelerate expiry.</li>
+        </ul>
+        <p>
+          Expired content will no longer be visible in the app to general users but may be retained internally for
+          safety, audit, and legal reasons as described in the
+          <a href="#data-retention">Data Retention</a> section.
+        </p>
+
+        <h3>1.4 Acceptable Use</h3>
+        <p>
+          You must comply with the <a href="#posting-policy">Posting Policy</a> and all applicable laws. You agree not to:
+        </p>
+        <ul>
+          <li>Engage in illegal, harmful, or fraudulent activity.</li>
+          <li>Harass, bully, threaten, or incite violence against others.</li>
+          <li>Post content that violates intellectual property or privacy rights.</li>
+          <li>Attempt to bypass security, abuse flags, or game the scoring system.</li>
+        </ul>
+
+        <h3>1.5 Plans, Billing & Payments</h3>
+        <p>
+          PipChat may offer free and paid plans with different features (e.g., longer post/community lifetimes,
+          additional tools, verification). Payments may be processed via:
+        </p>
+        <ul>
+          <li>Google Play Billing</li>
+          <li>Apple In-App Purchases (IAP)</li>
+          <li>Stripe</li>
+          <li>Razorpay</li>
+        </ul>
+        <p>
+          We do not store full payment card numbers. Billing terms (pricing, renewal, refunds) may be governed by
+          the relevant platform’s terms (e.g., Google Play, App Store) and our own plan-specific terms.
+        </p>
+
+        <h3>1.6 Suspension & Termination</h3>
+        <p>
+          We may suspend or terminate accounts, communities, or content if:
+        </p>
+        <ul>
+          <li>You violate these Terms or the Posting Policy.</li>
+          <li>You engage in abusive, fraudulent, or deceptive behavior.</li>
+          <li>We are required by law or receive legally valid requests from authorities.</li>
+        </ul>
+        <p>
+          We may, but are not obligated to, notify you of reasons for suspension/termination where legally allowed.
+        </p>
+
+        <h3>1.7 Disclaimers & Limitation of Liability</h3>
+        <p>
+          PipChat is provided on an “AS IS” and “AS AVAILABLE” basis. To the maximum extent permitted by law:
+        </p>
+        <ul>
+          <li>We do not warrant uninterrupted or error-free service.</li>
+          <li>We are not liable for user-generated content or actions of other users.</li>
+          <li>
+            Our aggregate liability to you for any claims related to the Service will be limited to the greater of:
+            (i) the amount you paid us in the last 12 months, or (ii) a reasonable fixed cap as defined by applicable law.
+          </li>
+        </ul>
+
+        <h3>1.8 Changes to the Terms</h3>
+        <p>
+          We may update these Terms as PipChat evolves. Significant changes will be communicated in-app or by other
+          appropriate means. Continued use of PipChat after changes take effect constitutes acceptance of the updates.
+        </p>
+      </section>
+
+      <!-- 2. PRIVACY POLICY -->
+      <section id="privacy-policy" class="policy-section">
+        <div class="badge-label"><span class="dot"></span> Data Protection</div>
+        <h2>2. Privacy Policy</h2>
+        <p>
+          This Privacy Policy explains how PipChat and ScatterBrain (“we”, “us”) collect, use, share, and protect
+          your personal data when you use our App and related services. It is designed to comply with applicable
+          privacy laws, including GDPR (where applicable) and CCPA/CPRA (for California residents).
+        </p>
+
+        <h3>2.1 What We Collect</h3>
+        <h4>2.1.1 Account Information</h4>
+        <ul>
+          <li>Email address</li>
+          <li>Phone number</li>
+          <li>Birth year</li>
+          <li>Username (internal to PipChat)</li>
+          <li>Profile picture</li>
+          <li>Government ID (where required for verification)</li>
+          <li>Business/government verification documents (for verified accounts)</li>
+        </ul>
+
+        <h4>2.1.2 Location Information</h4>
+        <ul>
+          <li>
+            <strong>GPS-based location</strong> when you are creating a post and do not manually select a location.
+          </li>
+          <li>
+            <strong>Manually selected map location</strong> when you choose a custom location for a post.
+          </li>
+        </ul>
+        <p>
+          PipChat does not continuously track your location in the background. Location is used contextually for
+          posting and ranking relevant content.
+        </p>
+
+        <h4>2.1.3 User-Generated Content</h4>
+        <p>
+          We process the content you create, including:
+        </p>
+        <ul>
+          <li>Public posts and threads</li>
+          <li>Community content</li>
+          <li>Chat messages and replies</li>
+          <li>Comments</li>
+          <li>Images or media files (viewable only when users tap “show more”)</li>
+        </ul>
+
+        <h4>2.1.4 Safety & Scoring Data</h4>
+        <p>
+          To maintain trust and safety, we may derive or store:
+        </p>
+        <ul>
+          <li>Verification score and status</li>
+          <li>Community trust score and moderation score</li>
+          <li>Flag counts (content reported by or against you)</li>
+          <li>Abuse patterns, spam indicators, device risk signals</li>
+        </ul>
+
+        <h4>2.1.5 Device & Technical Data</h4>
+        <ul>
+          <li>Device model and operating system version</li>
+          <li>App version</li>
+          <li>IP address and general network information</li>
+          <li>Crash logs and performance analytics</li>
+        </ul>
+
+        <h4>2.1.6 Payments & Subscriptions</h4>
+        <p>
+          When you purchase a plan, we receive:
+        </p>
+        <ul>
+          <li>Transaction ID and status</li>
+          <li>Plan or subscription tier</li>
+          <li>Billing platform (Google Play, App Store, Stripe, Razorpay)</li>
+        </ul>
+        <p>We do not store full payment card numbers.</p>
+
+        <h3>2.2 How We Use Your Data</h3>
+        <p>We use your information to:</p>
+        <ul>
+          <li>Provide and maintain PipChat and its core features.</li>
+          <li>Display public posts, communities, chats, and replies.</li>
+          <li>Determine local relevance for posts using location.</li>
+          <li>Verify user authenticity, including government/business verification.</li>
+          <li>Maintain user scores, trust levels, and moderation history.</li>
+          <li>Process payments, manage plans, and prevent fraud.</li>
+          <li>Respond to support requests and issues.</li>
+          <li>Improve and evolve PipChat using analytics and feedback.</li>
+        </ul>
+
+        <h3>2.3 Legal Bases (GDPR)</h3>
+        <p>Where GDPR applies, we rely on the following legal bases:</p>
+        <ul>
+          <li><strong>Consent</strong> – e.g., when you provide optional information or agree to location use.</li>
+          <li><strong>Contract</strong> – to deliver the services you request via the App.</li>
+          <li><strong>Legitimate Interest</strong> – security, fraud prevention, abuse detection, analytics.</li>
+          <li><strong>Legal Obligation</strong> – complying with laws, responding to valid legal requests.</li>
+        </ul>
+
+        <h3>2.4 Sharing of Information</h3>
+        <p>We may share data in these cases:</p>
+        <ul>
+          <li>
+            <strong>Service providers:</strong> cloud hosting, analytics, crash reporting, payments, content scanning,
+            customer support tools.
+          </li>
+          <li>
+            <strong>Legal and safety:</strong> with law enforcement or authorities when we must comply with valid legal
+            requests or prevent serious harm.
+          </li>
+          <li>
+            <strong>Other users:</strong> your public content, display name, profile picture, and public scores
+            may be visible to others.
+          </li>
+        </ul>
+        <p>
+          We do <strong>not</strong> sell your personal information. Where “sale” or “sharing” has a specific legal meaning
+          (e.g., under CCPA/CPRA), we operate in compliance and provide opt-out where required.
+        </p>
+
+        <h3>2.5 Retention & Expired Content</h3>
+        <p>
+          Posts, communities, and chat content may automatically expire from public view within a few days based on
+          plan-specific rules or moderation decisions. However, we may retain expired content internally:
+        </p>
+        <ul>
+          <li>For security, fraud, and abuse detection.</li>
+          <li>To respond to legal requests and investigations.</li>
+          <li>To analyze systemic abuse patterns (e.g., spam networks).</li>
+        </ul>
+        <p>
+          In some cases, we may allow users to retrieve their own expired content (e.g., posts expired less than
+          six months ago with no replies and no flags).
+        </p>
+
+        <h3>2.6 Your Rights</h3>
+        <p>Depending on your location, you may have the right to:</p>
+        <ul>
+          <li>Access the personal data we hold about you.</li>
+          <li>Request correction of inaccurate data.</li>
+          <li>Request deletion of your data (subject to legal/safety exceptions).</li>
+          <li>Request export of your data (data portability).</li>
+          <li>Object to or restrict certain types of processing.</li>
+          <li>Withdraw consent where processing is based on consent.</li>
+        </ul>
+        <p>
+          To exercise these rights, contact us at <strong>scatterbrain@gmail.com</strong>. We may ask you to verify
+          your identity before fulfilling your request.
+        </p>
+
+        <h3>2.7 Children & Minors</h3>
+        <p>
+          PipChat is not designed for children under 13, and we do not knowingly collect personal data from them.
+          If we learn that a user is under 13 without verified parent/guardian oversight, we will delete the account.
+        </p>
+        <p>
+          For minors aged 13–17, additional rules apply as described in the
+          <a href="#age-policy">Age-Gated Access Policy</a>, including compulsory parent account linking
+          and posting restrictions (no replies/comments for users under 16).
+        </p>
+
+        <h3>2.8 Security</h3>
+        <p>
+          We use reasonable and industry-aligned security measures, including encryption in transit, secure storage,
+          hashed passwords, access controls, and fraud detection systems. However, no system is completely secure.
+        </p>
+
+        <h3>2.9 International Transfers</h3>
+        <p>
+          Your data may be processed on servers located in different countries, including outside your country of
+          residence. Where required, we use appropriate safeguards such as Standard Contractual Clauses to protect
+          your data in cross-border transfers.
+        </p>
+
+        <h3>2.10 Contact</h3>
+        <p>
+          For any questions about this Privacy Policy or your data:
+        </p>
+        <p>
+          <strong>ScatterBrain</strong><br />
+          Email: <a href="mailto:scatterbrain@gmail.com">scatterbrain@gmail.com</a>
+        </p>
+      </section>
+
+      <!-- 3. POSTING POLICY -->
+      <section id="posting-policy" class="policy-section">
+        <div class="badge-label"><span class="dot"></span> Rules for Content</div>
+        <h2>3. Posting Policy (User Content Rules)</h2>
+        <p>
+          To maintain a safe environment, all users must respect this Posting Policy. You must explicitly accept
+          these rules before posting using the PipChat composer.
+        </p>
+
+        <h3>3.1 General Principles</h3>
+        <ul>
+          <li>Do not harm others or put them at risk.</li>
+          <li>Do not break the law or encourage others to do so.</li>
+          <li>Respect privacy, dignity, and safety of all people.</li>
+          <li>Understand that you are responsible for what you post and share.</li>
+        </ul>
+
+        <h3>3.2 Strictly Prohibited Content</h3>
+        <p>You may <strong>not</strong> post, share, or promote content that includes:</p>
+        <ul>
+          <li>Child sexual abuse material or any sexual content involving or depicting minors.</li>
+          <li>Content that exploits or endangers minors.</li>
+          <li>Incitement to violence, self-harm, or suicide.</li>
+          <li>Hate speech targeting individuals or groups based on protected characteristics.</li>
+          <li>Harassment, bullying, or targeted abuse.</li>
+          <li>Non-consensual intimate imagery or extremely explicit sexual content.</li>
+          <li>Instructions for illegal acts or serious harm (e.g., building weapons, hacking, terrorism).</li>
+          <li>Fraudulent scams, phishing, or impersonation of other individuals or entities.</li>
+          <li>Spam, misleading or manipulated media, or deceptive promotions.</li>
+          <li>Malware, hacking tools, or unauthorized access instructions.</li>
+        </ul>
+
+        <h3>3.3 Sensitive & Regulated Content</h3>
+        <ul>
+          <li>Do not share personal identifiable information of others without explicit consent.</li>
+          <li>Do not dox or encourage harassment against any individual or entity.</li>
+          <li>
+            Do not share medical, financial, or highly sensitive personal data of others in a way that could harm them.
+          </li>
+          <li>Respect copyright and intellectual property rights.</li>
+        </ul>
+
+        <h3>3.4 Media & “Show More” Safety Layer</h3>
+        <p>
+          PipChat uses a deliberate “no direct media auto-display” model. Media such as images or videos are hidden
+          behind a “show more” control. This:
+        </p>
+        <ul>
+          <li>Reduces accidental exposure to sensitive or undesired content.</li>
+          <li>Adds a friction layer before users view potentially graphic media.</li>
+        </ul>
+
+        <h3>3.5 Public Trust & Score System</h3>
+        <p>
+          To help users assess credibility, PipChat displays public trust and moderation scores based on factors like:
+        </p>
+        <ul>
+          <li>Verification status (email, phone, government ID, business/gov docs).</li>
+          <li>History of posts and comments.</li>
+          <li>Flags received and moderation actions.</li>
+          <li>Community feedback and behavior patterns.</li>
+        </ul>
+        <p>
+          Abusive or low-quality behavior will reduce public trust scores. Severe or repeated violations can lead to
+          suspension, bans, or legal escalation.
+        </p>
+
+        <h3>3.6 Responsibility & Liability</h3>
+        <p>
+          You acknowledge and agree that:
+        </p>
+        <ul>
+          <li>You are solely responsible for the content you publish.</li>
+          <li>Other users and third parties may rely on your posts at their own risk.</li>
+          <li>
+            ScatterBrain may remove or restrict content and accounts that violate this policy or applicable law without
+            further notice.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4. MODERATION POLICY -->
+      <section id="moderation-policy" class="policy-section">
+        <div class="badge-label"><span class="dot"></span> Enforcement</div>
+        <h2>4. Content Moderation Policy</h2>
+        <p>
+          Our moderation system combines automated detection, community flagging, and human review (where necessary)
+          to keep PipChat safe and usable.
+        </p>
+
+        <h3>4.1 Flagging & Reporting</h3>
+        <p>Users can flag:</p>
+        <ul>
+          <li>Posts and threads</li>
+          <li>Communities</li>
+          <li>Chat messages and replies</li>
+          <li>Users (e.g., for abuse or spam)</li>
+        </ul>
+        <p>
+          The system may enforce rules such as:
+        </p>
+        <ul>
+          <li>Limiting how often one user can flag the same content or community.</li>
+          <li>Reducing remaining lifetime of communities based on flag counts.</li>
+          <li>Hiding content or restricting visibility pending review.</li>
+        </ul>
+
+        <h3>4.2 Automated & Third-Party Tools</h3>
+        <p>
+          We may use automated systems and third-party processors to detect:
+        </p>
+        <ul>
+          <li>Spam and bots</li>
+          <li>Harmful or explicit content</li>
+          <li>Malicious behaviors and patterns</li>
+        </ul>
+        <p>
+          These tools assist human moderators but do not replace our judgment. We may refine them as PipChat grows.
+        </p>
+
+        <h3>4.3 Moderation Outcomes</h3>
+        <p>Enforcement actions may include (non-exhaustive):</p>
+        <ul>
+          <li>Soft warnings or educational notices.</li>
+          <li>Content removal or hiding.</li>
+          <li>Limiting posting or reply abilities (rate limiting or temporary muting).</li>
+          <li>Reducing user trust score or marking accounts as high-risk.</li>
+          <li>Suspending or banning accounts and communities.</li>
+          <li>Cooperating with law enforcement where there is risk of serious harm.</li>
+        </ul>
+
+        <h3>4.4 Appeals</h3>
+        <p>
+          Where feasible, we may provide a way for you to appeal moderation decisions by contacting support at
+          <a href="mailto:scatterbrain@gmail.com">scatterbrain@gmail.com</a>.
+          We cannot guarantee reversal and are not obligated to restore content removed for safety or legal reasons.
+        </p>
+      </section>
+
+      <!-- 5. DATA RETENTION -->
+      <section id="data-retention" class="policy-section">
+        <div class="badge-label"><span class="dot"></span> Compliance</div>
+        <h2>5. Data Retention & Storage</h2>
+        <p>
+          This section summarizes how long different categories of data are retained. These periods may be adjusted
+          to comply with evolving legal requirements or platform needs.
+        </p>
+
+        <div class="table-wrapper">
+          <table class="policy-table">
+            <thead>
+              <tr>
+                <th>Data Category</th>
+                <th>Examples</th>
+                <th>Default Retention</th>
+                <th>Notes / Exceptions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Account Data</td>
+                <td>Email, phone, username, birth year, profile picture</td>
+                <td>For the life of the account</td>
+                <td>Deleted when user deletes account, subject to legal/safety holds.</td>
+              </tr>
+              <tr>
+                <td>Verification Data</td>
+                <td>Government ID, business/gov docs</td>
+                <td>Until verification completed + up to several years</td>
+                <td>May be retained longer for fraud prevention or legal obligations.</td>
+              </tr>
+              <tr>
+                <td>Active Posts & Communities</td>
+                <td>Public posts, threads, community descriptions</td>
+                <td>Until natural expiry or user deletion</td>
+                <td>Lifetime varies by plan; content may expire within a few days.</td>
+              </tr>
+              <tr>
+                <td>Expired Content</td>
+                <td>Expired posts, communities, chats</td>
+                <td>6 months to several years</td>
+                <td>Retained for safety, abuse detection, and legal reasons; may be archived indefinitely for serious violations.</td>
+              </tr>
+              <tr>
+                <td>Chat Messages</td>
+                <td>Community messages, replies</td>
+                <td>Until community expiry or account deletion</td>
+                <td>Flagged or abusive content may be retained longer.</td>
+              </tr>
+              <tr>
+                <td>Flags & Moderation Logs</td>
+                <td>Reports, enforcement actions, scores</td>
+                <td>Indefinite</td>
+                <td>Required to prevent recurring abuse and track patterns.</td>
+              </tr>
+              <tr>
+                <td>Payment & Billing Records</td>
+                <td>Transaction ID, plan, billing platform</td>
+                <td>As required by tax and financial laws</td>
+                <td>Typically 5–10 years depending on jurisdiction.</td>
+              </tr>
+              <tr>
+                <td>Device & Technical Logs</td>
+                <td>IP, crash logs, analytics</td>
+                <td>6–24 months</td>
+                <td>Aggregated or anonymized analytics may be retained longer.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout">
+          <strong>Note:</strong> In cases of suspected fraud, severe abuse, or legal disputes, we may retain relevant
+          data longer than the default periods, as allowed by law.
+        </div>
+      </section>
+
+      <!-- 6. COOKIE POLICY -->
+      <section id="cookie-policy" class="policy-section">
+        <div class="badge-label"><span class="dot"></span> Identifiers</div>
+        <h2>6. Cookie & Tracking Policy</h2>
+        <p>
+          PipChat primarily operates as a mobile application. We may use in-app identifiers and, where applicable,
+          web cookies or similar technologies to improve functionality and security.
+        </p>
+
+        <h3>6.1 Types of Identifiers</h3>
+        <ul>
+          <li>
+            <strong>Essential identifiers:</strong> used for authentication, security, session management, and preventing
+            abuse or fraud.
+          </li>
+          <li>
+            <strong>Analytics identifiers:</strong> used to understand app performance, crashes, and usage patterns.
+          </li>
+          <li>
+            <strong>Device IDs:</strong> such as IDFA/GAID where available and permitted by your device settings.
+          </li>
+        </ul>
+
+        <h3>6.2 Managing Preferences</h3>
+        <p>
+          Depending on your platform, you may manage privacy and tracking settings at the device or OS level
+          (e.g., “Limit Ad Tracking” on iOS, Google advertising ID controls on Android).
+        </p>
+        <p>
+          If we introduce additional cookie or tracking preferences in the app or on the web, we will provide
+          appropriate controls and update this section.
+        </p>
+      </section>
+
+      <!-- 7. AGE-GATED ACCESS & MINORS -->
+      <section id="age-policy" class="policy-section">
+        <div class="badge-label"><span class="dot"></span> Minor Safety</div>
+        <h2>7. Age-Gated Access & Minor Safety Policy</h2>
+        <p>
+          PipChat is designed with strict protections for minors. We use birth year and account relationships
+          (parent/guardian links) to enforce age-based restrictions.
+        </p>
+
+        <h3>7.1 Under 13</h3>
+        <ul>
+          <li>PipChat is not intended for children under 13.</li>
+          <li>If we become aware of an under-13 account, we will delete or fully disable it.</li>
+          <li>We will remove associated data as required by law, subject to safety/legal holds.</li>
+        </ul>
+
+        <h3>7.2 Ages 13–15 (Under 16)</h3>
+        <ul>
+          <li>A valid parent or guardian account must be linked to the minor’s account.</li>
+          <li>The parent/guardian must approve the minor’s account.</li>
+          <li>The parent/guardian must approve post creation; minors cannot post independently where this is enforced.</li>
+          <li>
+            Users under 16 are <strong>not allowed to write replies/comments</strong>, even if they can create posts
+            with parent approval.
+          </li>
+          <li>PipChat may show indicators to the parent/guardian for oversight (e.g., activity summaries).</li>
+        </ul>
+
+        <h3>7.3 Ages 16–17</h3>
+        <ul>
+          <li>A parent/guardian account link may still be required, depending on local laws and app settings.</li>
+          <li>
+            Post creation and some actions may require parental approval or may be more lightly supervised
+            compared to younger minors.
+          </li>
+          <li>We may still restrict certain sensitive features to users 18+ only.</li>
+        </ul>
+
+        <h3>7.4 Parent / Guardian Responsibilities</h3>
+        <p>
+          Parents or guardians who link their account to a minor:
+        </p>
+        <ul>
+          <li>Agree to monitor and oversee the minor’s use of PipChat.</li>
+          <li>Accept responsibility for the minor’s actions and adherence to the Posting Policy and Terms.</li>
+          <li>Can revoke consent or request account deletion at any time (subject to verification).</li>
+        </ul>
+
+        <h3>7.5 Verification & False Information</h3>
+        <p>
+          We may take action if we suspect that:
+        </p>
+        <ul>
+          <li>A user has misrepresented their birth year to bypass age rules.</li>
+          <li>A parent/guardian account is not legitimate or is being misused.</li>
+        </ul>
+        <p>
+          Actions may include limiting features, requiring additional verification, or suspending the account(s).
+        </p>
+      </section>
+
+      <footer>
+        <div class="footer-row">
+          <div>
+            &copy; <span id="year"></span> ScatterBrain · PipChat – Publicly Interactive Post Chat
+          </div>
+          <div>
+            Contact: <a href="mailto:scatterbrain@gmail.com">scatterbrain@gmail.com</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // inject current year
+    (function() {
+      var y = new Date().getFullYear();
+      var el = document.getElementById("year");
+      if (el) el.textContent = y;
+    })();
+  </script>
+</body>
+</html>
