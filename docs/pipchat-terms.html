@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PipChat – Terms of Use</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card-bg: #0b1220;
+      --accent: #f59e0b;
+      --accent-soft: rgba(245, 158, 11, 0.1);
+      --accent-strong: #d97706;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --danger: #ef4444;
+      --green: #22c55e;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 58%, #020617 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.85),
+        rgba(15, 23, 42, 0.7),
+        transparent
+      );
+      border-bottom: 1px solid rgba(55, 65, 81, 0.7);
+    }
+
+    .shell {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 16px 20px 40px 20px;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+    }
+
+    .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 16px;
+      background: radial-gradient(circle at 20% 20%, #fed7aa, #f97316);
+      box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 18px;
+      color: #0f172a;
+    }
+
+    .logo-text-main {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .meta-pill {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(75, 85, 99, 0.8);
+      font-size: 11px;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.4);
+    }
+
+    main {
+      margin-top: 12px;
+    }
+
+    .page-title {
+      margin-top: 16px;
+      margin-bottom: 18px;
+    }
+
+    .page-title h1 {
+      font-size: 22px;
+      margin: 0 0 6px 0;
+      letter-spacing: 0.03em;
+    }
+
+    .page-title .subtitle {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .page-title .motto {
+      font-size: 13px;
+      margin-top: 6px;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .page-title .tagline {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.9);
+      font-size: 11px;
+      padding: 4px 12px;
+      color: var(--muted);
+    }
+
+    .pill strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    section.terms-section {
+      margin-top: 24px;
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(55, 65, 81, 0.85);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 16px 16px;
+    }
+
+    section.terms-section h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 18px;
+      letter-spacing: 0.02em;
+    }
+
+    section.terms-section h3 {
+      margin-top: 16px;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    section.terms-section p {
+      font-size: 13px;
+      margin: 4px 0;
+      color: var(--text);
+    }
+
+    section.terms-section ul {
+      padding-left: 18px;
+      margin: 4px 0 8px 0;
+    }
+
+    section.terms-section li {
+      font-size: 13px;
+      margin: 3px 0;
+      color: var(--text);
+    }
+
+    .badge-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-soft);
+      border: 1px solid rgba(245, 158, 11, 0.7);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .badge-label span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .callout {
+      margin-top: 8px;
+      padding: 8px 10px;
+      border-radius: var(--radius-md);
+      border: 1px dashed rgba(148, 163, 184, 0.8);
+      background: rgba(15, 23, 42, 0.85);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .callout strong {
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(55, 65, 81, 0.8);
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-row a {
+      font-size: 11px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <div class="top-bar">
+        <div class="logo-block">
+          <div class="logo-mark">P</div>
+          <div>
+            <div class="logo-text-main">PipChat</div>
+            <div class="motto">
+              For the people, By the people
+            </div>
+            <div class="logo-text-sub">
+              Publicly Interactive Post Chat
+            </div>
+          </div>
+        </div>
+        <div class="meta-pill">
+          <span class="meta-dot"></span>
+          <span>Last updated: <strong>22 Nov 2025</strong></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="shell">
+      <div class="page-title">
+        <h1>Terms of Use</h1>
+        <div class="subtitle">
+          These Terms of Use govern your access to and use of PipChat and form a legally binding agreement between you and ScatterBrain.
+        </div>
+        <div class="motto">Motto: For the people, By the people.</div>
+        <div class="tagline">Product: PipChat – Publicly Interactive Post Chat.</div>
+
+        <div class="pill-row">
+          <div class="pill"><strong>Service:</strong> PipChat mobile apps & related services</div>
+          <div class="pill"><strong>Provider:</strong> ScatterBrain</div>
+          <div class="pill"><strong>Support:</strong> scatterbrain@gmail.com</div>
+        </div>
+      </div>
+
+      <section class="terms-section">
+        <div class="badge-label"><span class="dot"></span> Agreement</div>
+        <h2>1. Acceptance of Terms</h2>
+        <p>
+          By creating an account, accessing, or using PipChat (“<strong>Service</strong>”), you agree to these
+          Terms of Use (“<strong>Terms</strong>”). If you do not agree, you must not use the Service.
+        </p>
+        <p>
+          These Terms work together with our
+          <a href="https://sakharevallabh.github.io/public/pipchat_privacy_policy.html">Privacy Policy</a>,
+          <a href="https://sakharevallabh.github.io/public/pipchat_posting_policy.html">Posting Policy</a>, and other policies referenced on this page
+          (collectively, the “<strong>Agreements</strong>”).
+        </p>
+
+        <h3>1.1 Eligibility</h3>
+        <ul>
+          <li>You must be legally able to enter into a contract in your jurisdiction.</li>
+          <li>Minors must comply with the
+            <a href="https://sakharevallabh.github.io/public/pipchat_privacy_policy.html#age-policy">Age-Gated Access & Minor Safety Policy</a>.
+          </li>
+          <li>You must not be prohibited from using the Service under applicable laws.</li>
+        </ul>
+
+        <h3>1.2 Changes to the Terms</h3>
+        <p>
+          We may update these Terms from time to time. If we make material changes, we will notify you via the app
+          or other appropriate channels. Continued use of PipChat after changes become effective constitutes your
+          acceptance of the updated Terms.
+        </p>
+
+        <hr style="border-color: rgba(55,65,81,0.8); margin: 16px 0;" />
+
+        <div class="badge-label"><span class="dot"></span> Accounts</div>
+        <h2>2. Accounts & Registration</h2>
+        <p>
+          To use certain features, you must create a PipChat account and provide accurate, up-to-date information.
+        </p>
+
+        <h3>2.1 Account Information</h3>
+        <p>During registration, you may be asked to provide:</p>
+        <ul>
+          <li>Email address and/or phone number</li>
+          <li>Birth year</li>
+          <li>A username (internal to PipChat)</li>
+          <li>Profile image</li>
+          <li>Optional verification details (e.g., government ID, business/gov documents)</li>
+        </ul>
+
+        <h3>2.2 Security of Your Account</h3>
+        <ul>
+          <li>You are responsible for maintaining the confidentiality of your login credentials.</li>
+          <li>You are responsible for all activities under your account.</li>
+          <li>You must notify us promptly of any unauthorized access or breach at
+            <a href="mailto:scatterbrain@gmail.com">scatterbrain@gmail.com</a>.
+          </li>
+        </ul>
+
+        <h3>2.3 Parent & Minor Accounts</h3>
+        <p>
+          If you are a minor (under 18), your account is subject to the
+          <a href="https://sakharevallabh.github.io/public/pipchat_privacy_policy.html#age-policy">Age-Gated Access & Minor Safety Policy</a>.
+          In summary:
+        </p>
+        <ul>
+          <li><strong>Under 13:</strong> PipChat is not intended for you. Accounts must not be created.</li>
+          <li>
+            <strong>13–15 (under 16):</strong> You may only use PipChat with a linked parent/guardian account who
+            approves your account and posts. You are not allowed to create replies/comments.
+          </li>
+          <li>
+            <strong>16–17:</strong> You may be required to have a parent-linked account with oversight and certain
+            feature limits, depending on regional law and app settings.
+          </li>
+        </ul>
+        <p>
+          Parent or guardian accounts are responsible for monitoring and supervising the minor’s use of PipChat.
+        </p>
+
+        <hr style="border-color: rgba(55,65,81,0.8); margin: 16px 0;" />
+
+        <div class="badge-label"><span class="dot"></span> Use of Service</div>
+        <h2>3. Description of Service</h2>
+        <p>
+          PipChat is a public, time-bound social platform enabling users to post updates, join communities, chat,
+          and engage in local or thematic conversations. Content may be:
+        </p>
+        <ul>
+          <li>Public posts and threads</li>
+          <li>Community posts</li>
+          <li>Chats and replies</li>
+          <li>Images and media files (viewable only behind a “show more” action)</li>
+        </ul>
+
+        <p>
+          Many content types automatically expire after a limited time, influenced by:
+        </p>
+        <ul>
+          <li>Your plan or subscription tier</li>
+          <li>System-wide content lifetime settings</li>
+          <li>Safety flags and moderation actions (which may accelerate expiry)</li>
+        </ul>
+
+        <div class="callout">
+          <strong>Note:</strong> Even after posts or communities expire from public view, we may retain copies
+          internally for safety, security, and legal reasons, as explained in the Privacy Policy and Data Retention section.
+        </div>
+
+        <h3>3.1 Plan Tiers & Features</h3>
+        <p>
+          PipChat may offer different plan tiers (e.g., free, value, premium, business, government) with varying
+          features, including:
+        </p>
+        <ul>
+          <li>Different content lifetimes before expiry</li>
+          <li>Enhanced verification and trust features</li>
+          <li>Additional tools for community management</li>
+        </ul>
+
+        <h3>3.2 Ephemeral Communities & Posts</h3>
+        <p>
+          Communities created by users may automatically expire after a period tied to the creator’s plan.
+          Flags and moderation may further reduce remaining time or cause early expiration.
+        </p>
+
+        <hr style="border-color: rgba(55,65,81,0.8); margin: 16px 0;" />
+
+        <div class="badge-label"><span class="dot"></span> Acceptable Use</div>
+        <h2>4. Acceptable Use & Prohibited Conduct</h2>
+        <p>
+          You must follow the
+          <a href="https://sakharevallabh.github.io/public/pipchat_privacy_policy.html#posting-policy">Posting Policy</a> at all times. You agree NOT to:
+        </p>
+        <ul>
+          <li>Use the Service for any illegal purpose or in violation of any law.</li>
+          <li>
+            Post or share content that is abusive, harassing, hateful, sexually explicit involving minors, or incites violence.
+          </li>
+          <li>Engage in bullying, stalking, or targeted harassment of individuals or groups.</li>
+          <li>Impersonate any person or entity or misrepresent your affiliation.</li>
+          <li>Upload or distribute malware, spam, or deceptive content.</li>
+          <li>Attempt to bypass moderation or manipulate the scoring/trust system.</li>
+          <li>Infringe any copyright, trademark, or other intellectual property rights.</li>
+        </ul>
+
+        <h3>4.1 Media Safety</h3>
+        <p>
+          PipChat’s design requires users to explicitly tap “show more” to view media. You must still ensure that
+          any media you upload complies with the Posting Policy and local laws.
+        </p>
+
+        <h3>4.2 Community Features</h3>
+        <p>
+          When creating or moderating a community, you must:
+        </p>
+        <ul>
+          <li>Set topics and rules that do not conflict with these Terms or applicable laws.</li>
+          <li>Not encourage harmful or illegal behavior.</li>
+          <li>Respect users’ safety, privacy, and dignity.</li>
+        </ul>
+
+        <hr style="border-color: rgba(55,65,81,0.8); margin: 16px 0;" />
+
+        <div class="badge-label"><span class="dot"></span> Payments</div>
+        <h2>5. Billing, Payments & Subscriptions</h2>
+        <p>
+          Paid features may be purchased through third-party platforms:
+        </p>
+        <ul>
+          <li>Google Play Billing</li>
+          <li>Apple In-App Purchases</li>
+          <li>Stripe</li>
+          <li>Razorpay</li>
+        </ul>
+
+        <h3>5.1 Payment Processing</h3>
+        <p>
+          Payments are processed by the respective platform or payment processor. We do not store full card numbers.
+          Transaction data (status, plan type, identifiers) may be stored for billing records and fraud prevention.
+        </p>
+
+        <h3>5.2 Renewals & Cancellations</h3>
+        <p>
+          Auto-renewing subscriptions are governed by the rules of the store/platform you used (e.g., Google Play,
+          App Store). Please refer to your platform’s subscription management settings to cancel, change plans, or
+          request refunds where applicable.
+        </p>
+
+        <hr style="border-color: rgba(55,65,81,0.8); margin: 16px 0;" />
+
+        <div class="badge-label"><span class="dot"></span> User Content</div>
+        <h2>6. User Content & Licenses</h2>
+        <p>
+          You retain ownership of the content you post on PipChat. By posting, you grant ScatterBrain a
+          limited, worldwide, non-exclusive, royalty-free license to use, store, reproduce, modify, and display
+          your content for the purpose of operating and improving the Service, enforcing policies, and complying
+          with legal obligations.
+        </p>
+
+        <h3>6.1 Public Display & Ephemeral Nature</h3>
+        <p>
+          Content posted on PipChat may be publicly visible for a limited time. After expiry, content will no longer
+          be available to general users but may be retained internally as described in the
+          <a href="https://sakharevallabh.github.io/public/pipchat_privacy_policy.html">Privacy Policy</a>.
+        </p>
+
+        <h3>6.2 Responsibility for Content</h3>
+        <p>
+          You are solely responsible for your content. This includes ensuring it does not violate:
+        </p>
+        <ul>
+          <li>These Terms and the Posting Policy</li>
+          <li>Third-party rights</li>
+          <li>Any applicable law or regulation</li>
+        </ul>
+
+        <hr style="border-color: rgba(55,65,81,0.8); margin: 16px 0;" />
+
+        <div class="badge-label"><span class="dot"></span> Moderation</div>
+        <h2>7. Moderation, Enforcement & Scores</h2>
+        <p>
+          PipChat uses a combination of automated analysis, community flagging, and human review to maintain safety.
+          See the separate
+          <a href="https://sakharevallabh.github.io/public/pipchat_privacy_policy.html#moderation-policy">Content Moderation Policy</a> for details.
+        </p>
+
+        <h3>7.1 Enforcement Actions</h3>
+        <p>We may take actions including but not limited to:</p>
+        <ul>
+          <li>Warning notices</li>
+          <li>Post or community removal</li>
+          <li>Reduced visibility of content or accounts</li>
+          <li>Limitations on posting or replying</li>
+          <li>Suspension or termination of accounts</li>
+          <li>Reporting to law enforcement where necessary</li>
+        </ul>
+
+        <h3>7.2 Public Scores & Verification</h3>
+        <p>
+          PipChat may display verification status, trust scores, and community scores on user profiles.
+          These scores are based on factors such as:
+        </p>
+        <ul>
+          <li>Verification level (email, phone, ID, business/gov docs)</li>
+          <li>Posting and comment history</li>
+          <li>Moderation actions and flag reports</li>
+        </ul>
+
+        <hr style="border-color: rgba(55,65,81,0.8); margin: 16px 0;" />
+
+        <div class="badge-label"><span class="dot"></span> Data & Privacy</div>
+        <h2>8. Privacy & Data Processing</h2>
+        <p>
+          Your use of PipChat is also governed by our
+          <a href="https://sakharevallabh.github.io/public/pipchat_privacy_policy.html">Privacy Policy</a>, which describes:
+        </p>
+        <ul>
+          <li>What personal data we collect</li>
+          <li>How we use, share, and protect that data</li>
+          <li>Your rights under GDPR, CCPA/CPRA, and other regulations</li>
+        </ul>
+
+        <hr style="border-color: rgba(55,65,81,0.8); margin: 16px 0;" />
+
+        <div class="badge-label"><span class="dot"></span> Termination</div>
+        <h2>9. Suspension & Termination</h2>
+        <p>
+          We may suspend or terminate your access to PipChat, in whole or in part, if:
+        </p>
+        <ul>
+          <li>You violate these Terms or the Posting Policy.</li>
+          <li>We detect abusive, fraudulent, or unsafe behavior.</li>
+          <li>We are required by law, regulation, or valid legal order.</li>
+        </ul>
+        <p>
+          Upon termination, your right to use the Service ends immediately. Some data may be retained for safety,
+          legal, or auditing purposes in line with the Privacy Policy and Data Retention section.
+        </p>
+
+        <hr style="border-color: rgba(55,65,81,0.8); margin: 16px 0;" />
+
+        <div class="badge-label"><span class="dot"></span> Legal</div>
+        <h2>10. Disclaimers & Limitation of Liability</h2>
+        <h3>10.1 No Warranty</h3>
+        <p>
+          PipChat is provided “AS IS” and “AS AVAILABLE” without warranties of any kind, whether express or implied,
+          including but not limited to implied warranties of merchantability, fitness for a particular purpose, and
+          non-infringement.
+        </p>
+
+        <h3>10.2 Limitation of Liability</h3>
+        <p>
+          To the maximum extent permitted by law, ScatterBrain and its affiliates, officers, employees, and agents
+          will not be liable for:
+        </p>
+        <ul>
+          <li>Any indirect, incidental, special, consequential, or punitive damages.</li>
+          <li>Loss of profits, data, goodwill, or other intangible losses.</li>
+          <li>
+            Any damages exceeding the amount you paid to us for the Service in the 12 months prior to the event giving
+            rise to the claim, or a reasonable statutory cap where applicable.
+          </li>
+        </ul>
+
+        <h3>10.3 Indemnification</h3>
+        <p>
+          You agree to indemnify, defend, and hold harmless ScatterBrain from any claims, liabilities, damages, losses,
+          and expenses (including reasonable legal fees) arising from or related to:
+        </p>
+        <ul>
+          <li>Your use of the Service</li>
+          <li>Your content</li>
+          <li>Your violation of these Terms or applicable law</li>
+        </ul>
+
+        <hr style="border-color: rgba(55,65,81,0.8); margin: 16px 0;" />
+
+        <div class="badge-label"><span class="dot"></span> Misc</div>
+        <h2>11. Governing Law & Dispute Resolution</h2>
+        <p>
+          These Terms are governed by the laws of the jurisdiction where ScatterBrain is established
+          (to be specified by you), without regard to conflict of law principles.
+        </p>
+        <p>
+          Any disputes arising out of or relating to these Terms or the Service will be resolved in the courts
+          of that jurisdiction, unless applicable law requires otherwise. Where permitted, you and ScatterBrain
+          agree to waive class actions and bring claims only in an individual capacity.
+        </p>
+
+        <h3>11.1 Severability</h3>
+        <p>
+          If any provision of these Terms is held invalid or unenforceable, the remaining provisions will remain in
+          full force and effect.
+        </p>
+
+        <h3>11.2 Entire Agreement</h3>
+        <p>
+          These Terms, together with the Privacy Policy, Posting Policy, Content Moderation Policy, and Age-Gated
+          Access Policy, form the entire agreement between you and ScatterBrain regarding use of PipChat.
+        </p>
+
+        <h3>11.3 Contact</h3>
+        <p>
+          If you have any questions about these Terms, please contact:
+        </p>
+        <p>
+          <strong>ScatterBrain</strong><br />
+          Email: <a href="mailto:scatterbrain@gmail.com">scatterbrain@gmail.com</a>
+        </p>
+      </section>
+
+      <footer>
+        <div class="footer-row">
+          <div>
+            &copy; <span id="year"></span> ScatterBrain · PipChat – Publicly Interactive Post Chat
+          </div>
+          <div>
+            <a href="https://sakharevallabh.github.io/public/pipchat_privacy_policy.html">Privacy Policy</a> ·
+            <a href="https://sakharevallabh.github.io/public/pipchat_posting_policy.html">Posting Policy</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      var y = new Date().getFullYear();
+      var el = document.getElementById("year");
+      if (el) el.textContent = y;
+    })();
+  </script>
+</body>
+</html>
