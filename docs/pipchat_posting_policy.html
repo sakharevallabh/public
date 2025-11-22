@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PipChat – Posting Policy & User Liability</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card-bg: #0b1220;
+      --accent: #f59e0b;
+      --accent-soft: rgba(245, 158, 11, 0.1);
+      --accent-strong: #d97706;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --danger: #ef4444;
+      --green: #22c55e;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 58%, #020617 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(15, 23, 42, 0.85);
+      border-bottom: 1px solid rgba(55, 65, 81, 0.7);
+    }
+    .shell { max-width: 900px; margin: 0 auto; padding: 16px 22px 50px; }
+
+    .top-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 10px;
+    }
+    .logo-block {
+      display: flex; gap: 12px; align-items: center;
+    }
+    .logo-mark {
+      width: 38px; height: 38px; border-radius: 14px;
+      background: radial-gradient(circle at 20% 20%, #fed7aa, #f97316);
+      display: flex; align-items: center; justify-content: center;
+      color: #0f172a; font-weight: 900; font-size: 18px;
+    }
+    .logo-text-main { font-size: 19px; font-weight: 700; letter-spacing: .03em; }
+    .logo-text-sub { font-size: 11px; color: var(--muted); }
+
+    .meta-pill {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(75,85,99,0.8);
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .meta-dot {
+      width: 6px; height: 6px; border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(245,158,11,0.35);
+    }
+
+    .page-title { margin-top: 20px; margin-bottom: 20px; }
+    .page-title h1 {
+      margin: 0; font-size: 24px; letter-spacing: 0.02em;
+    }
+    .page-title .subtitle { color: var(--muted); font-size: 14px; margin-top: 4px; }
+    .page-title .motto { margin-top: 7px; color: var(--green); font-weight: 600; font-size: 13px; }
+    .page-title .tagline { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    section.policy-section {
+      margin-top: 26px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(55,65,81,0.85);
+      border-radius: var(--radius-lg);
+      padding: 20px 18px 20px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    section.policy-section h2 {
+      font-size: 20px;
+      margin-top: 0; margin-bottom: 10px;
+    }
+    section.policy-section h3 {
+      margin-top: 18px; margin-bottom: 8px;
+      font-size: 15px;
+    }
+    section.policy-section p {
+      font-size: 14px; margin: 6px 0;
+    }
+    section.policy-section ul {
+      margin: 6px 0 12px 18px; padding-left: 8px;
+    }
+    section.policy-section li {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .red-box {
+      background: #FEF2F2;
+      border: 1px solid #DC2626;
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 22px;
+      color: #7F1D1D;
+    }
+    .red-box h3 {
+      color: #B91C1C;
+      margin-top: 0;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(55,65,81,0.7);
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="shell">
+    <div class="top-bar">
+      <div class="logo-block">
+        <div class="logo-mark">P</div>
+        <div>
+          <div class="logo-text-main">PipChat</div>
+          <div class="logo-text-sub">Posting Policy & User Liability</div>
+        </div>
+      </div>
+      <div class="meta-pill">
+        <span class="meta-dot"></span>
+        Last updated: <strong>22 Nov 2025</strong>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="shell">
+    <div class="page-title">
+      <h1>Posting Policy & User Liability</h1>
+      <div class="subtitle">Rules governing what users may post on PipChat</div>
+      <div class="motto">For the people, By the people.</div>
+      <div class="tagline">PipChat – Publicly Interactive Post Chat</div>
+    </div>
+
+    <section class="policy-section">
+
+      <!-- Red Liability Box -->
+      <div class="red-box">
+        <h3>USER RESPONSIBILITY & LIABILITY</h3>
+        <p>
+          You are solely responsible for the content you post on PipChat.  
+          The platform does not pre-screen or endorse user-generated material.  
+          By posting, you explicitly agree that **any legal consequences, civil liability,  
+          or disputes arising from your content are entirely your responsibility**.
+        </p>
+        <p>
+          You agree to indemnify and hold harmless PipChat, ScatterBrain, its employees,  
+          and contractors from any claims or damages related to your content.
+        </p>
+      </div>
+
+      <h2>1. Platform Intent & Guiding Principles</h2>
+      <p>
+        PipChat is designed for open, constructive, community-driven public conversation.  
+        To maintain a safe environment, all posted content must follow these rules.
+      </p>
+
+      <h2>2. Prohibited & Illegal Content</h2>
+      <p>Posts may NOT contain:</p>
+      <ul>
+        <li>Child sexual abuse material (CSAM) or any content involving minors sexually.</li>
+        <li>Promotion, coordination, or glorification of terrorism or violent extremism.</li>
+        <li>Illegal drug sale or distribution.</li>
+        <li>Sexually explicit content (especially involving minors).</li>
+        <li>Incitement to violence, threats, or calls for physical harm.</li>
+        <li>Content violating copyright/trademark laws.</li>
+        <li>Financial scams, harmful challenges, criminal instructions, or hacking guidance.</li>
+      </ul>
+
+      <h2>3. Accuracy, Misinformation & Public Harm</h2>
+      <p>You agree to avoid posting:</p>
+      <ul>
+        <li>Rumors, fabricated claims, or unverified accusations.</li>
+        <li>Misinformation intended to mislead or incite panic.</li>
+        <li>False claims that may damage individuals, communities, or public order.</li>
+      </ul>
+
+      <h2>4. Harassment, Abuse & Hate Speech</h2>
+      <p>The following are strictly prohibited:</p>
+      <ul>
+        <li>Harassment, bullying, stalking, or targeted hateful behavior.</li>
+        <li>Attacks on protected characteristics (race, religion, orientation, disability, etc.).</li>
+        <li>Encouraging others to harass or harm someone.</li>
+      </ul>
+
+      <h2>5. Privacy, Safety & Doxing Rules</h2>
+      <p>You may NOT post:</p>
+      <ul>
+        <li>Any personal information (PII) of individuals or entities without their explicit consent.</li>
+        <li>Home addresses, phone numbers, private emails, financial/medical data, etc.</li>
+        <li>Doxing attempts, threats to expose someone’s identity, or blackmail.</li>
+      </ul>
+
+      <h2>6. Enforcement & Moderation</h2>
+      <p>PipChat may take any of these actions:</p>
+      <ul>
+        <li>Immediate removal of violating content.</li>
+        <li>Temporary or permanent limitations on posting.</li>
+        <li>Account suspension or termination.</li>
+        <li>Reporting to legal authorities where required.</li>
+      </ul>
+      <p>
+        Moderators may edit, hide, or delete posts at any time to enforce policy compliance.
+      </p>
+
+      <h2>7. Minors & Underage Posting Restrictions</h2>
+      <p>These rules apply:</p>
+      <ul>
+        <li><strong>Under 13:</strong> Cannot use PipChat.</li>
+        <li><strong>13–15 (Under 16):</strong> Must have a parent-linked account.  
+          Cannot create replies or comments. All posts must be approved by a parent/guardian.</li>
+        <li><strong>16–17:</strong> May face reduced permissions; may require parent approval for posting.</li>
+      </ul>
+      <p>
+        Parents/guardians are fully accountable for the activity of their linked minor accounts.
+      </p>
+
+      <h2>8. Consent & Acceptance</h2>
+      <p>
+        By posting on PipChat, you acknowledge and fully accept this Posting Policy  
+        and consent to the platform’s moderation, enforcement, and safety processes.
+      </p>
+
+      <h2>9. Thank You</h2>
+      <p>
+        Thank you for helping to keep PipChat constructive, respectful, and safe.  
+        Your cooperation ensures healthy public discourse for everyone.
+      </p>
+
+    </section>
+
+    <footer>
+      <div class="footer-row">
+        <div>
+          &copy; <span id="year"></span> ScatterBrain · PipChat – Publicly Interactive Post Chat
+        </div>
+        <div>
+          <a href="https://sakharevallabh.github.io/public/pipchat_privacy_policy.htm">Privacy Policy</a>
+          <a href="https://sakharevallabh.github.io/public/pipchat_terms.html">Terms of Use</a>
+          <a href="mailto:scatterbrain@gmail.com">Contact Support</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>
