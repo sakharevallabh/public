@@ -1,76 +1,1262 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Vibe NextGen Music Player</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Privacy Policy — Vibe Music Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary:            #6650A4;
+            --primary-dark:       #4F378B;
+            --primary-gradient:   linear-gradient(135deg, #4527A0 0%, #6650A4 55%, #9356F7 100%);
+            --primary-container:  #EADDFF;
+            --on-primary:         #FFFFFF;
+            --secondary:          #625B71;
+            --secondary-container:#E8DEF8;
+            --on-secondary:       #1D192B;
+            --surface:            #FFFBFE;
+            --surface-variant:    #E7E0EC;
+            --surface-card:       #FFFFFF;
+            --on-surface:         #1C1B1F;
+            --on-surface-mid:     #312E37;
+            --on-surface-variant: #49454F;
+            --outline:            #79747E;
+            --outline-variant:    #CAC4D0;
+            --bg:                 #F4F0FA;
+            --shadow-sm:  0 1px 3px rgba(103,80,164,0.08), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md:  0 4px 14px rgba(103,80,164,0.10), 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-lg:  0 12px 32px rgba(103,80,164,0.14), 0 4px 8px rgba(0,0,0,0.04);
+            --r-sm:  8px;
+            --r-md:  12px;
+            --r-lg:  16px;
+            --r-xl:  24px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--on-surface);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ── Top navigation ───────────────────────────────── */
+        .topnav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            height: 56px;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 251, 254, 0.88);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-bottom: 1px solid var(--outline-variant);
+        }
+
+        .topnav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .topnav-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-gradient);
+            border-radius: var(--r-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            box-shadow: 0 2px 8px rgba(103,80,164,0.35);
+        }
+
+        .topnav-brand-text {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.4px;
+        }
+
+        .topnav-doc {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--on-surface-variant);
+            letter-spacing: 0.2px;
+        }
+
+        /* ── Hero ────────────────────────────────────────── */
+        .hero {
+            background: var(--primary-gradient);
+            padding: 72px 24px 88px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle grid pattern */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        /* Glow orbs */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hero-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.30);
+            padding: 5px 16px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.95);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 5.5vw, 44px);
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.8px;
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+
+        .hero-sub {
+            font-size: 15px;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 6px;
+        }
+
+        .hero-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+            padding: 4px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.88);
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .hero-summary {
+            font-size: 15px;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.22);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.92);
+        }
+
+        /* ── Layout ──────────────────────────────────────── */
+        .layout {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 36px 20px 80px;
+        }
+
+        /* ── Section card ─────────────────────────────────── */
+        .section {
+            background: var(--surface-card);
+            border-radius: var(--r-xl);
+            padding: 32px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--outline-variant);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .section-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--r-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .icon-purple  { background: #EADDFF; }
+        .icon-blue    { background: #E3F2FD; }
+        .icon-green   { background: #E8F5E9; }
+        .icon-red     { background: #FFEBEE; }
+        .icon-orange  { background: #FFF3E0; }
+        .icon-pink    { background: #FCE4EC; }
+        .icon-teal    { background: #E0F7FA; }
+        .icon-amber   { background: #FFFDE7; }
+        .icon-indigo  { background: #E8EAF6; }
+
+        .section-eyebrow {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--on-surface);
+            letter-spacing: -0.3px;
+            line-height: 1.3;
+        }
+
+        /* ── Prose ───────────────────────────────────────── */
+        p {
+            color: var(--on-surface-variant);
+            font-size: 14.5px;
+            line-height: 1.75;
+            margin-bottom: 12px;
+        }
+
+        p:last-child { margin-bottom: 0; }
+
+        strong { color: var(--on-surface-mid); font-weight: 600; }
+
+        ul.prose-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 14px;
+        }
+
+        ul.prose-list li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 14.5px;
+            color: var(--on-surface-variant);
+            line-height: 1.75;
+            margin-bottom: 4px;
+        }
+
+        ul.prose-list li::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 10px;
+            width: 5px;
+            height: 5px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        /* ── Divider subsection ───────────────────────────── */
+        .subsection {
+            margin-top: 26px;
+            padding-top: 26px;
+            border-top: 1px solid var(--outline-variant);
+        }
+
+        .subsection-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--on-surface-mid);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .subsection-title .pill {
+            font-size: 10px;
+            font-weight: 700;
+            background: var(--primary-container);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 100px;
+            letter-spacing: 0.3px;
+        }
+
+        /* ── Tables ──────────────────────────────────────── */
+        .table-wrap { overflow-x: auto; margin: 14px -4px; padding: 0 4px; }
+
+        table.dt {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            border-radius: var(--r-md);
+            overflow: hidden;
+            border: 1px solid var(--outline-variant);
+        }
+
+        table.dt thead {
+            background: var(--primary);
+            color: white;
+        }
+
+        table.dt thead th {
+            padding: 10px 14px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        table.dt tbody tr:nth-child(even) { background: #FAFAFA; }
+
+        table.dt tbody tr:hover {
+            background: var(--primary-container);
+            transition: background 0.12s;
+        }
+
+        table.dt tbody td {
+            padding: 9px 14px;
+            border-bottom: 1px solid #F0EBF8;
+            vertical-align: top;
+            color: var(--on-surface-variant);
+            line-height: 1.5;
+        }
+
+        table.dt tbody tr:last-child td { border-bottom: none; }
+
+        table.dt tbody td:first-child {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 12px;
+            color: var(--primary);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        /* ── Permission list ─────────────────────────────── */
+        .perm-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+
+        .perm-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 13px 16px;
+            background: #FAFAFA;
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--r-md);
+        }
+
+        .perm-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10.5px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: var(--r-sm);
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .pb-audio    { background: #E3F2FD; color: #1565C0; }
+        .pb-location { background: #E8F5E9; color: #2E7D32; }
+        .pb-network  { background: #FFF3E0; color: #E65100; }
+        .pb-system   { background: #F3E5F5; color: #6A1B9A; }
+        .pb-record   { background: #FCE4EC; color: #AD1457; }
+
+        .perm-text strong {
+            display: block;
+            font-size: 13px;
+            color: var(--on-surface-mid);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .perm-text p {
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        /* ── Service cards ───────────────────────────────── */
+        .service-card {
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--r-lg);
+            padding: 22px;
+            margin: 14px 0;
+        }
+
+        .service-card:first-of-type { margin-top: 18px; }
+
+        .service-head {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .service-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--r-sm);
+            background: var(--surface-variant);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .service-name { font-size: 15px; font-weight: 700; color: var(--on-surface); }
+
+        .service-tag {
+            font-size: 11px;
+            color: var(--primary);
+            font-weight: 600;
+            background: var(--primary-container);
+            padding: 2px 8px;
+            border-radius: 100px;
+        }
+
+        /* ── Info boxes ──────────────────────────────────── */
+        .ibox {
+            padding: 14px 18px;
+            border-radius: var(--r-md);
+            margin: 14px 0;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .ibox-icon { font-size: 17px; flex-shrink: 0; margin-top: 1px; }
+
+        .ibox p { margin: 0; font-size: 13.5px; line-height: 1.6; }
+
+        .ibox-purple { background: var(--primary-container); border-left: 3px solid var(--primary); }
+        .ibox-green  { background: #E8F5E9; border-left: 3px solid #43A047; }
+        .ibox-amber  { background: #FFFDE7; border-left: 3px solid #F9A825; }
+        .ibox-red    { background: #FFEBEE; border-left: 3px solid #E53935; }
+
+        /* ── Code inline ─────────────────────────────────── */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            background: var(--primary-container);
+            color: var(--primary);
+            padding: 1px 6px;
+            border-radius: 5px;
+        }
+
+        /* ── Rights grid ─────────────────────────────────── */
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .right-card {
+            background: var(--surface-variant);
+            border-radius: var(--r-md);
+            padding: 18px;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .right-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .right-icon { font-size: 22px; margin-bottom: 10px; }
+        .right-title { font-size: 13px; font-weight: 700; color: var(--on-surface-mid); margin-bottom: 5px; }
+        .right-desc  { font-size: 12px; color: var(--on-surface-variant); line-height: 1.55; }
+
+        /* ── TOC bar ─────────────────────────────────────── */
+        .toc-bar {
+            background: white;
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--r-xl);
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .toc-bar-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 14px;
+        }
+
+        .toc-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .toc-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+            background: var(--surface-variant);
+            color: var(--on-surface-variant);
+            padding: 6px 13px;
+            border-radius: 100px;
+            font-size: 12.5px;
+            font-weight: 500;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .toc-item:hover {
+            background: var(--primary-container);
+            color: var(--primary);
+        }
+
+        /* ── Contact card ────────────────────────────────── */
+        .contact-card {
+            background: linear-gradient(135deg, #F3EAF9 0%, #E8DEF8 100%);
+            border: 1px solid #D0BCFF;
+            border-radius: var(--r-xl);
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.4px;
+            margin-bottom: 8px;
+        }
+
+        .contact-card .sub {
+            font-size: 14px;
+            color: var(--secondary);
+            margin-bottom: 24px;
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.1px;
+            box-shadow: 0 4px 16px rgba(103,80,164,0.35);
+            transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(103,80,164,0.45);
+        }
+
+        .contact-footer {
+            margin-top: 18px;
+            font-size: 12.5px;
+            color: var(--secondary);
+        }
+
+        /* ── Footer ──────────────────────────────────────── */
+        .footer {
+            text-align: center;
+            padding: 28px 24px 40px;
+            font-size: 12.5px;
+            color: var(--on-surface-variant);
+        }
+
+        .footer a { color: var(--primary); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+
+        /* ── Responsive ──────────────────────────────────── */
+        @media (max-width: 640px) {
+            .hero { padding: 52px 18px 68px; }
+            .section { padding: 22px 18px; border-radius: var(--r-lg); }
+            .rights-grid { grid-template-columns: 1fr 1fr; }
+            .perm-item { flex-direction: column; gap: 8px; }
+            .contact-card { padding: 28px 20px; }
+            table.dt thead th,
+            table.dt tbody td { padding: 8px 10px; }
+        }
+
+        @media (max-width: 380px) {
+            .rights-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-<body class="bg-gray-100 p-8">
-    <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-xl">
-        <h1 class="text-3xl font-bold text-gray-800 mb-4">Privacy Policy for Vibe - NextGen Music Player</h1>
-        <p class="text-sm font-medium text-gray-500 mb-6">
-            <strong>Effective Date:</strong> 25/08/2025
+<body>
+
+<!-- Top navigation -->
+<nav class="topnav">
+    <a class="topnav-brand" href="#">
+        <div class="topnav-icon">♪</div>
+        <span class="topnav-brand-text">Vibe</span>
+    </a>
+    <span class="topnav-doc">Privacy Policy</span>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+    <div class="hero-inner">
+        <div class="hero-badge">⚖️ Legal Document</div>
+        <h1>Privacy Policy</h1>
+        <p class="hero-sub">Vibe — NextGen Music Player</p>
+        <div class="hero-date">📅 Effective June 16, 2026</div>
+        <p class="hero-summary">
+            Vibe is built on an offline-first, privacy-respecting philosophy. Your music library, listening history,
+            and personal reflections stay on your device. This policy is a complete and accurate account of what
+            data is collected, where it goes, and what you can do about it.
         </p>
-        
-        <p class="text-gray-700 leading-relaxed mb-6">
-            This Privacy Policy informs you regarding our policies concerning the collection, use, and disclosure of Personal Information for users of the Vibe - NextGen Music Player mobile application (the "App").
+        <div class="hero-pills">
+            <span class="hero-pill">🔒 Local-first storage</span>
+            <span class="hero-pill">📴 Offline playback</span>
+            <span class="hero-pill">📍 Optional location</span>
+            <span class="hero-pill">🔇 No analytics SDK</span>
+            <span class="hero-pill">👤 No account required</span>
+        </div>
+    </div>
+</div>
+
+<div class="layout">
+
+    <!-- Table of Contents -->
+    <div class="toc-bar">
+        <div class="toc-bar-title">Contents</div>
+        <div class="toc-items">
+            <a class="toc-item" href="#s1">1 · Overview</a>
+            <a class="toc-item" href="#s2">2 · Data We Collect</a>
+            <a class="toc-item" href="#s3">3 · Permissions</a>
+            <a class="toc-item" href="#s4">4 · Third-Party Services</a>
+            <a class="toc-item" href="#s5">5 · Storage &amp; Security</a>
+            <a class="toc-item" href="#s6">6 · Your Controls</a>
+            <a class="toc-item" href="#s7">7 · Children's Privacy</a>
+            <a class="toc-item" href="#s8">8 · Policy Changes</a>
+            <a class="toc-item" href="#s9">9 · Contact</a>
+        </div>
+    </div>
+
+    <!-- ── 1. Overview ──────────────────────────────────────────────────── -->
+    <div class="section" id="s1">
+        <div class="section-header">
+            <div class="section-icon icon-purple">📋</div>
+            <div>
+                <div class="section-eyebrow">Section 1</div>
+                <div class="section-title">Overview</div>
+            </div>
+        </div>
+        <p>
+            Vibe is an Android music player that reads and plays audio files stored locally on your device.
+            <strong>The core experience — playback, playlists, equalizer, and audio tools — is entirely offline.</strong>
+            No account, no sign-up, no cloud sync.
+        </p>
+        <p>
+            Two optional features involve the internet: fetching song lyrics from a public API, and displaying
+            banner advertisements. Both are described in full in Section 4. No analytics SDK, crash reporter,
+            or user-tracking library is embedded in the app.
+        </p>
+        <div class="ibox ibox-purple">
+            <span class="ibox-icon">ℹ️</span>
+            <p>
+                Vibe has no way to identify you personally. There is no account, email address, username, or
+                device identifier linked to your data within the app. Your listening history exists only on your
+                own device.
+            </p>
+        </div>
+    </div>
+
+    <!-- ── 2. Data We Collect ───────────────────────────────────────────── -->
+    <div class="section" id="s2">
+        <div class="section-header">
+            <div class="section-icon icon-blue">🗄️</div>
+            <div>
+                <div class="section-eyebrow">Section 2</div>
+                <div class="section-title">Data We Collect &amp; Store</div>
+            </div>
+        </div>
+        <p>
+            All data below is stored <strong>locally in Vibe's private SQLite database on your device</strong>,
+            accessible only to Vibe. None of it is transmitted to our servers (because we don't have any).
         </p>
 
-        <p class="text-gray-700 leading-relaxed mb-6">
-            As an offline music player, our App is designed to function entirely on your device and does not require an internet connection to play music.
+        <!-- 2.1 Music Library -->
+        <div class="subsection" id="s2-1">
+            <div class="subsection-title">2.1 &nbsp;Music Library Metadata <span class="pill">Always collected</span></div>
+            <p>
+                When you open Vibe, it scans Android's MediaStore to build your music library. The following
+                song attributes are indexed and stored in a local database table (<code>songs</code>):
+            </p>
+            <div class="table-wrap">
+                <table class="dt">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Source</th>
+                            <th>Why it's stored</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>title</td><td>ID3 tag / MediaStore</td><td>Display name and lyrics API lookup</td></tr>
+                        <tr><td>artist</td><td>ID3 tag / MediaStore</td><td>Display and lyrics API lookup</td></tr>
+                        <tr><td>album</td><td>ID3 tag / MediaStore</td><td>Album grouping and display</td></tr>
+                        <tr><td>albumArtUri</td><td>MediaStore (embedded art)</td><td>Cover art display in UI</td></tr>
+                        <tr><td>durationMs</td><td>MediaStore</td><td>Progress bar and skip thresholds</td></tr>
+                        <tr><td>contentUri</td><td>MediaStore</td><td>Stable reference for playback</td></tr>
+                        <tr><td>year, trackNumber, genre</td><td>ID3 tag</td><td>Sorting and metadata display</td></tr>
+                        <tr><td>isFavorite</td><td>App-created</td><td>Favorites playlist membership</td></tr>
+                        <tr><td>playCount, lastPlayedTimestamp</td><td>App-created</td><td>Top Songs and Recent lists</td></tr>
+                        <tr><td>lyrics</td><td>Embedded ID3 or fetched on-demand</td><td>In-app lyrics display (see §4.1)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                Vibe only reads audio files. It does not access documents, photos, videos, contacts, or any
+                other files on your device.
+            </p>
+        </div>
+
+        <!-- 2.2 Listening History -->
+        <div class="subsection" id="s2-2">
+            <div class="subsection-title">2.2 &nbsp;Listening Sessions (Journey Feature) <span class="pill">Always collected</span></div>
+            <p>
+                Every time you play a song, Vibe creates a <strong>listening session</strong> record in its local
+                database. These sessions power the Journey screen — your personal timeline, analytics
+                (total listening time, mood breakdowns, peak hours, top songs), and mood-based discovery.
+                <strong>Sessions shorter than 15 seconds are automatically discarded</strong> to filter out
+                accidental taps and skips.
+            </p>
+            <div class="table-wrap">
+                <table class="dt">
+                    <thead>
+                        <tr><th>Field</th><th>Type</th><th>Purpose</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>songId</td><td>Foreign key</td><td>Links to the song being played</td></tr>
+                        <tr><td>startTimestampMs</td><td>Unix timestamp (ms)</td><td>When you started listening</td></tr>
+                        <tr><td>endTimestampMs</td><td>Unix timestamp (ms)</td><td>When playback stopped</td></tr>
+                        <tr><td>durationListenedMs</td><td>Milliseconds</td><td>Actual time spent listening</td></tr>
+                        <tr><td>latitude, longitude</td><td>GPS decimal degrees</td><td>Location tag — only if permission granted (see §2.3)</td></tr>
+                        <tr><td>locationAccuracy</td><td>Float (metres)</td><td>GPS accuracy indicator</td></tr>
+                        <tr><td>locationName</td><td>Text string</td><td>Human-readable place name from on-device geocoding</td></tr>
+                        <tr><td>mood</td><td>User-selected string</td><td>Optional mood you tag (Happy, Calm, Sad, etc.)</td></tr>
+                        <tr><td>note</td><td>Free text</td><td>Optional personal note you add</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                Your listening history <strong>never leaves your device</strong>. All analytics are computed
+                locally. You can edit or delete any individual session from the Journey Timeline tab.
+            </p>
+        </div>
+
+        <!-- 2.3 Location -->
+        <div class="subsection" id="s2-3">
+            <div class="subsection-title">2.3 &nbsp;Location Data <span class="pill">Optional — requires permission</span></div>
+            <div class="ibox ibox-amber">
+                <span class="ibox-icon">📍</span>
+                <p>
+                    <strong>Location is entirely optional.</strong> If you deny the location permission, all
+                    Vibe features work normally — listening sessions are just recorded without coordinates.
+                </p>
+            </div>
+            <p>When location permission is granted, each time you start a song Vibe:</p>
+            <ul class="prose-list">
+                <li>Requests a single GPS reading from your device's location system</li>
+                <li>Caches the result for up to 60 seconds to minimise battery usage</li>
+                <li>Passes the coordinates to Android's built-in <code>Geocoder</code> for a human-readable place name — this runs <strong>entirely on-device</strong> with no external network call</li>
+                <li>Stores the latitude, longitude, accuracy, and place name in the local sessions table</li>
+            </ul>
+            <p>
+                Location data is <strong>never transmitted to any server</strong>. It is used solely to display
+                your listening map and location statistics in the Journey screen. You can revoke location
+                permission at any time in Android Settings. Previously stored coordinates remain in the local
+                database until you clear app data or uninstall.
+            </p>
+        </div>
+
+        <!-- 2.4 Mood & Notes -->
+        <div class="subsection" id="s2-4">
+            <div class="subsection-title">2.4 &nbsp;Mood Tags &amp; Personal Notes <span class="pill">User-initiated</span></div>
+            <p>
+                From the Journey Timeline, you can optionally tag any listening session with a mood (Happy,
+                Energetic, Calm, Sad, Focused, Nostalgic, Romantic, Angry) and add a free-text note.
+                Vibe <strong>never infers, auto-assigns, or AI-generates</strong> moods — you always choose them
+                explicitly.
+            </p>
+            <p>
+                Mood and note data is stored locally and used to power Timeline filtering and the Discover tab
+                ("surface songs you've loved when feeling Calm"). It is never transmitted anywhere.
+            </p>
+        </div>
+
+        <!-- 2.5 Tags & Playlists -->
+        <div class="subsection" id="s2-5">
+            <div class="subsection-title">2.5 &nbsp;Tags &amp; Playlists <span class="pill">Always local</span></div>
+            <p>
+                Custom tags you create (e.g., "Workout", "Late Night"), playlists you build, your Favorites list,
+                and recently played / top songs lists are all stored locally. Your current playback queue, position
+                in the song, shuffle mode, and repeat setting are persisted in device SharedPreferences so the
+                app restores your exact state after being closed.
+            </p>
+        </div>
+
+        <!-- 2.6 Audio Recordings -->
+        <div class="subsection" id="s2-6">
+            <div class="subsection-title">2.6 &nbsp;Audio Recordings (Recording Tool) <span class="pill">Optional — requires permission</span></div>
+            <p>
+                Vibe includes an optional audio recording tool accessible from the Explore screen. When you use it:
+            </p>
+            <ul class="prose-list">
+                <li>Audio is captured from your device microphone and saved as a file in Vibe's local storage</li>
+                <li>Each recording stores a timestamp, duration, trimming range, and an optional display name you provide</li>
+                <li>Recordings are never uploaded, transmitted, or shared automatically</li>
+                <li>You can trim, rename, and delete recordings entirely within the app</li>
+            </ul>
+            <div class="ibox ibox-green">
+                <span class="ibox-icon">✅</span>
+                <p>
+                    The <code>RECORD_AUDIO</code> permission is requested only when you open the Recording Tool
+                    for the first time. It does not allow Vibe to record audio in the background or without your
+                    explicit initiation.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── 3. Permissions ───────────────────────────────────────────────── -->
+    <div class="section" id="s3">
+        <div class="section-header">
+            <div class="section-icon icon-green">🔐</div>
+            <div>
+                <div class="section-eyebrow">Section 3</div>
+                <div class="section-title">Android Permissions We Request</div>
+            </div>
+        </div>
+        <p>
+            Below is every permission declared in Vibe's manifest, with the exact reason it is needed.
+            Runtime permissions (those that show a system dialog) are only requested when you first access
+            the feature that needs them — not on app launch.
         </p>
 
-        <!-- 1. Data Collection and Use -->
-        <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-3">1. Data Collection and Use</h2>
-        <p class="text-gray-700 leading-relaxed mb-4">
-            The App is designed to provide a completely offline experience. It <strong class="text-gray-900">does not collect, transmit, store, or share any personal information</strong> from its users.
-        </p>
-        <p class="text-gray-700 leading-relaxed mb-4">
-            All user data, including your music files and playlists, is stored locally on your device's internal storage. We do not have access to this data, and it is not sent to any external servers.
+        <div class="perm-list">
+
+            <div class="perm-item">
+                <span class="perm-badge pb-audio">READ_MEDIA_AUDIO</span>
+                <div class="perm-text">
+                    <strong>Read Music Files &nbsp;·&nbsp; Android 13+</strong>
+                    <p>Scans your device storage for audio files to build your music library. Without this, the app cannot function.</p>
+                </div>
+            </div>
+
+            <div class="perm-item">
+                <span class="perm-badge pb-audio">READ_EXTERNAL_STORAGE</span>
+                <div class="perm-text">
+                    <strong>Storage Access &nbsp;·&nbsp; Android 12 and below</strong>
+                    <p>Legacy equivalent of READ_MEDIA_AUDIO for older Android versions. Same purpose.</p>
+                </div>
+            </div>
+
+            <div class="perm-item">
+                <span class="perm-badge pb-audio">ACCESS_MEDIA_LOCATION</span>
+                <div class="perm-text">
+                    <strong>GPS Data in Media Files</strong>
+                    <p>Allows reading GPS coordinates embedded in audio file metadata (EXIF data). Distinct from live location collection.</p>
+                </div>
+            </div>
+
+            <div class="perm-item">
+                <span class="perm-badge pb-location">ACCESS_FINE_LOCATION</span>
+                <div class="perm-text">
+                    <strong>Precise GPS Location &nbsp;·&nbsp; Runtime, optional</strong>
+                    <p>Used only to tag listening sessions with your current location in the Journey feature. Requested at runtime only when you first enable this feature. Denying it has no effect on music playback.</p>
+                </div>
+            </div>
+
+            <div class="perm-item">
+                <span class="perm-badge pb-location">ACCESS_COARSE_LOCATION</span>
+                <div class="perm-text">
+                    <strong>Approximate Location &nbsp;·&nbsp; Runtime, optional</strong>
+                    <p>Fallback when GPS is unavailable. Used for the same listening session location feature.</p>
+                </div>
+            </div>
+
+            <div class="perm-item">
+                <span class="perm-badge pb-record">RECORD_AUDIO</span>
+                <div class="perm-text">
+                    <strong>Microphone &nbsp;·&nbsp; Runtime, optional</strong>
+                    <p>Used exclusively by the Audio Recording Tool. Requested only the first time you open that screen. Does not enable background recording.</p>
+                </div>
+            </div>
+
+            <div class="perm-item">
+                <span class="perm-badge pb-network">INTERNET</span>
+                <div class="perm-text">
+                    <strong>Network Access</strong>
+                    <p>Required for two optional features: (1) fetching song lyrics from the Lyrics.ovh public API when lyrics are not embedded in the audio file, and (2) loading Google AdMob banner advertisements.</p>
+                </div>
+            </div>
+
+            <div class="perm-item">
+                <span class="perm-badge pb-system">FOREGROUND_SERVICE</span>
+                <div class="perm-text">
+                    <strong>Background Playback Service</strong>
+                    <p>Keeps the music player service running when you switch to another app or lock your screen. Required for the persistent media notification with playback controls.</p>
+                </div>
+            </div>
+
+            <div class="perm-item">
+                <span class="perm-badge pb-system">WAKE_LOCK</span>
+                <div class="perm-text">
+                    <strong>Prevent CPU Sleep During Playback</strong>
+                    <p>Prevents the device's CPU from sleeping mid-track, which would cause audio to cut out. Released automatically when playback stops.</p>
+                </div>
+            </div>
+
+            <div class="perm-item">
+                <span class="perm-badge pb-system">POST_NOTIFICATIONS</span>
+                <div class="perm-text">
+                    <strong>Media Controls Notification &nbsp;·&nbsp; Android 13+, Runtime</strong>
+                    <p>Displays the playback notification with track info and controls in the notification shade and lock screen.</p>
+                </div>
+            </div>
+
+            <div class="perm-item">
+                <span class="perm-badge pb-audio">MODIFY_AUDIO_SETTINGS</span>
+                <div class="perm-text">
+                    <strong>Audio Focus Management</strong>
+                    <p>Allows Vibe to request audio focus so it pauses automatically when a phone call, navigation prompt, or another app needs audio. Releases focus when you pause.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── 4. Third-Party Services ─────────────────────────────────────── -->
+    <div class="section" id="s4">
+        <div class="section-header">
+            <div class="section-icon icon-orange">🔗</div>
+            <div>
+                <div class="section-eyebrow">Section 4</div>
+                <div class="section-title">Third-Party Services</div>
+            </div>
+        </div>
+        <p>
+            Vibe uses exactly <strong>two</strong> external services. No analytics SDK, crash reporter,
+            A/B testing library, or user-tracking framework is embedded beyond what is listed here.
         </p>
 
-        <!-- 2. Permissions -->
-        <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-3">2. Permissions</h2>
-        <p class="text-gray-700 leading-relaxed mb-4">
-            The App requires access to your device's local storage to find and play music files. This permission is necessary for the core functionality of the App. The data accessed with this permission remains on your device and is not collected or used for any other purpose.
-        </p>
+        <!-- Lyrics.ovh -->
+        <div class="service-card" id="s4-1">
+            <div class="service-head">
+                <div class="service-logo">📝</div>
+                <div>
+                    <div class="service-name">Lyrics.ovh API</div>
+                    <span class="service-tag">Lyrics · Optional · On-demand</span>
+                </div>
+            </div>
+            <p>
+                When you tap to view lyrics for a song and the lyrics are not embedded in the audio file
+                itself, Vibe sends a request to the public Lyrics.ovh API.
+            </p>
+            <div class="table-wrap">
+                <table class="dt">
+                    <thead>
+                        <tr><th>What is sent</th><th>What is received</th><th>When it happens</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>artist (text)</td>
+                            <td rowspan="2" style="vertical-align:middle;">Lyrics text (plain text)</td>
+                            <td rowspan="2" style="vertical-align:middle;">Only when you tap to view lyrics and no embedded lyrics exist in the file</td>
+                        </tr>
+                        <tr><td>song title (text)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                No personal data, location, mood data, device identifiers, or listening history is transmitted.
+                The fetched lyrics are cached locally in the <code>songs</code> database table to avoid
+                repeat network requests for the same song.
+            </p>
+            <p>
+                Lyrics.ovh is a free public API. You can review their service at
+                <a href="https://lyricsovh.docs.apiary.io" style="color:var(--primary);">lyricsovh.docs.apiary.io</a>.
+                Vibe is not affiliated with Lyrics.ovh.
+            </p>
+        </div>
 
-        <!-- 3. Third-Party Services -->
-        <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-3">3. Third-Party Services</h2>
-        <p class="text-gray-700 leading-relaxed mb-4">
-            The App does not use any third-party services that collect user data, such as advertising networks, analytics providers, or crash reporting tools.
-        </p>
-        
-        <!-- 4. Children's Privacy -->
-        <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-3">4. Children's Privacy</h2>
-        <p class="text-gray-700 leading-relaxed mb-4">
-            This App does not address anyone under the age of 13. We do not knowingly collect any personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we can take the necessary actions.
-        </p>
+        <!-- Google AdMob -->
+        <div class="service-card" id="s4-2">
+            <div class="service-head">
+                <div class="service-logo">📢</div>
+                <div>
+                    <div class="service-name">Google AdMob</div>
+                    <span class="service-tag">Advertising · Automatic when app is open</span>
+                </div>
+            </div>
+            <p>
+                Vibe displays banner advertisements served by Google AdMob. Advertising revenue helps support
+                continued development of the app. When AdMob is active, Google may collect the following
+                device-level information to serve ads:
+            </p>
+            <ul class="prose-list">
+                <li>Android Advertising ID (GAID) — used to serve relevant ads and limit ad frequency</li>
+                <li>Device make, model, and Android OS version</li>
+                <li>App version and bundle identifier</li>
+                <li>Device locale (language/region) and timezone</li>
+                <li>Network connectivity type (WiFi or cellular)</li>
+                <li>IP address (used by Google for general geographic ad targeting)</li>
+            </ul>
+            <div class="ibox ibox-amber">
+                <span class="ibox-icon">⚠️</span>
+                <p>
+                    Google AdMob is governed by Google's Privacy Policy, available at
+                    <a href="https://policies.google.com/privacy" style="color:var(--primary);">policies.google.com/privacy</a>.
+                    You can opt out of personalised ads on Android by navigating to
+                    <strong>Settings → Google → Ads → Delete advertising ID</strong>.
+                </p>
+            </div>
+            <p>
+                We do not share your listening history, location data, mood entries, notes, or any content
+                from Vibe's local database with Google AdMob. Ad targeting is based solely on device-level
+                information that Google collects independently through its SDK.
+            </p>
+        </div>
+    </div>
 
-        <!-- 5. Changes to This Privacy Policy -->
-        <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-3">5. Changes to This Privacy Policy</h2>
-        <p class="text-gray-700 leading-relaxed mb-4">
-            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
-        </p>
-        <p class="text-gray-700 leading-relaxed mb-4">
-            You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
-        </p>
+    <!-- ── 5. Data Storage & Security ─────────────────────────────────── -->
+    <div class="section" id="s5">
+        <div class="section-header">
+            <div class="section-icon icon-teal">🔒</div>
+            <div>
+                <div class="section-eyebrow">Section 5</div>
+                <div class="section-title">Data Storage &amp; Security</div>
+            </div>
+        </div>
 
-        <!-- 6. Contact Us -->
-        <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-3">6. Contact Us</h2>
-        <p class="text-gray-700 leading-relaxed mb-4">
-            If you have any questions or suggestions about this Privacy Policy, please do not hesitate to contact us at:
+        <div class="subsection" style="margin-top:0; padding-top:0; border-top:none;">
+            <div class="subsection-title">Where your data lives</div>
+            <p>
+                All Vibe data — listening sessions, playlists, tags, mood entries, personal notes, and song
+                index — is stored in a <strong>private SQLite database on your device</strong>
+                (<code>vibe_database</code>) in Vibe's protected internal storage directory. This directory is
+                not accessible to other apps and is not included in Android's shared storage.
+            </p>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">Cloud backup</div>
+            <p>
+                Vibe explicitly <strong>opts out of Android's Auto Backup</strong> feature. Your Vibe data is
+                not synced to your Google Account, not included in device-to-device transfers, and not backed
+                up to any cloud service. This is an intentional privacy decision. It also means that if you
+                switch devices or reinstall the app, your listening history will not be restored.
+            </p>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">Encryption</div>
+            <p>
+                Vibe's database uses standard SQLite storage without an additional application-layer encryption
+                wrapper. Your device's own full-disk or file-based encryption (enabled automatically when you
+                set a screen lock on Android 10+) protects all app data from physical access. We recommend
+                keeping a screen lock enabled on your device.
+            </p>
+        </div>
+
+        <div class="subsection">
+            <div class="subsection-title">Data retention</div>
+            <p>
+                Your data persists in the Vibe database for as long as the app is installed. There is no
+                automatic expiration. You have full control: individual listening sessions can be deleted from
+                the Journey Timeline. All data is permanently and completely deleted when you uninstall the
+                app or use <strong>Settings → Apps → Vibe → Storage → Clear Data</strong>.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- ── 6. Your Rights & Controls ──────────────────────────────────── -->
+    <div class="section" id="s6">
+        <div class="section-header">
+            <div class="section-icon icon-pink">⚙️</div>
+            <div>
+                <div class="section-eyebrow">Section 6</div>
+                <div class="section-title">Your Rights &amp; Controls</div>
+            </div>
+        </div>
+        <p>
+            Because all Vibe data is stored locally on your device, you have complete and immediate
+            control over it without needing to contact us.
         </p>
-        <p class="text-gray-700 leading-relaxed font-bold">
-            Email: <a href="mailto:valssakhare@gmail.com" class="text-blue-600 hover:underline">scatterbraindev@gmail.com</a>
+        <div class="rights-grid">
+            <div class="right-card">
+                <div class="right-icon">✏️</div>
+                <div class="right-title">Edit any session</div>
+                <div class="right-desc">Add, edit, or remove mood tags and notes from any listening session in the Journey Timeline.</div>
+            </div>
+            <div class="right-card">
+                <div class="right-icon">🗑️</div>
+                <div class="right-title">Delete sessions</div>
+                <div class="right-desc">Remove individual sessions from the Journey Timeline, or clear all app data via Android Settings.</div>
+            </div>
+            <div class="right-card">
+                <div class="right-icon">📍</div>
+                <div class="right-title">Revoke location</div>
+                <div class="right-desc">Revoke location permission anytime in Android Settings. Future sessions won't include GPS data.</div>
+            </div>
+            <div class="right-card">
+                <div class="right-icon">🎙️</div>
+                <div class="right-title">Revoke recording</div>
+                <div class="right-desc">Revoke RECORD_AUDIO permission in Settings. The Recording Tool will be disabled immediately.</div>
+            </div>
+            <div class="right-card">
+                <div class="right-icon">📢</div>
+                <div class="right-title">Opt out of personalised ads</div>
+                <div class="right-desc">On Android: Settings → Google → Ads → Delete advertising ID. Non-personalised ads will still be shown.</div>
+            </div>
+            <div class="right-card">
+                <div class="right-icon">🚫</div>
+                <div class="right-title">Full deletion</div>
+                <div class="right-desc">Uninstalling Vibe permanently removes all app data from your device. No residual data is retained on any server.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── 7. Children's Privacy ──────────────────────────────────────── -->
+    <div class="section" id="s7">
+        <div class="section-header">
+            <div class="section-icon icon-amber">🧒</div>
+            <div>
+                <div class="section-eyebrow">Section 7</div>
+                <div class="section-title">Children's Privacy</div>
+            </div>
+        </div>
+        <p>
+            Vibe is not directed at children under the age of 13. We do not knowingly collect personally
+            identifiable information from anyone, and have no mechanism to verify a user's age (since the
+            app requires no account).
+        </p>
+        <p>
+            If you are a parent or guardian and have concerns about data stored by Vibe on your child's
+            device, you can clear it by going to <strong>Settings → Apps → Vibe → Storage → Clear Data</strong>
+            on their Android device.
+        </p>
+        <p>
+            If you believe your child has been subject to any privacy concern through use of this app,
+            please contact us at the address in Section 9.
         </p>
     </div>
+
+    <!-- ── 8. Policy Changes ───────────────────────────────────────────── -->
+    <div class="section" id="s8">
+        <div class="section-header">
+            <div class="section-icon icon-indigo">📣</div>
+            <div>
+                <div class="section-eyebrow">Section 8</div>
+                <div class="section-title">Changes to This Policy</div>
+            </div>
+        </div>
+        <p>
+            We may update this Privacy Policy when Vibe adds new features, integrates new services, or when
+            legal requirements change. When we do, we will update the <strong>Effective Date</strong> at the
+            top of this document and post the updated version at this same URL.
+        </p>
+        <p>
+            <strong>For material changes</strong> — such as adding a new third-party service, changing how
+            location data is used, or altering data retention practices — we will additionally notify you
+            via an in-app banner on the next app launch after the change takes effect.
+        </p>
+        <p>
+            Continued use of the app after an updated policy is posted constitutes acceptance of the changes.
+            If you disagree with any change, you can stop using the app and delete all local data by
+            uninstalling it.
+        </p>
+    </div>
+
+    <!-- ── 9. Contact ─────────────────────────────────────────────────── -->
+    <div class="contact-card" id="s9">
+        <h3>Questions or Concerns?</h3>
+        <p class="sub">
+            If you have questions about this Privacy Policy, how Vibe handles your data, or want to report a
+            privacy concern, we'd like to hear from you.
+        </p>
+        <a class="contact-btn" href="mailto:scatterbraindev@gmail.com">
+            <span>✉️</span> scatterbraindev@gmail.com
+        </a>
+        <p class="contact-footer">
+            Vibe — NextGen Music Player &nbsp;·&nbsp; Developed by Scatterbrain Dev
+        </p>
+    </div>
+
+</div><!-- /layout -->
+
+<!-- Footer -->
+<div class="footer">
+    <p>© 2026 Scatterbrain Dev. All rights reserved.</p>
+    <p style="margin-top:5px;">Privacy Policy · Effective <strong>June 16, 2026</strong> · <a href="#">Back to top ↑</a></p>
+</div>
+
 </body>
 </html>
