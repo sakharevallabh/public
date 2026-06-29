@@ -988,7 +988,7 @@
                 <span class="perm-badge pb-network">INTERNET</span>
                 <div class="perm-text">
                     <strong>Network Access</strong>
-                    <p>Required for the app's optional online features: fetching song lyrics (LRCLIB, with Lyrics.ovh as fallback), streaming music (Audius, and Jamendo when configured), browsing and playing internet radio (Radio-Browser and the stations' own stream servers), and loading Google AdMob advertisements (banner and full-screen interstitial). See Section 4 for details on each.</p>
+                    <p>Required for the app's optional online features: fetching song lyrics (LRCLIB, with Lyrics.ovh as fallback), streaming music (Audius and Jamendo), browsing and playing internet radio (Radio-Browser and the stations' own stream servers), and loading Google AdMob advertisements (native cards, banners, and full-screen interstitials). See Section 4 for details on each.</p>
                 </div>
             </div>
 
@@ -1190,10 +1190,15 @@
                 </div>
             </div>
             <p>
-                Vibe displays advertisements served by Google AdMob: <strong>banner ads</strong> within scrolling
-                lists, and a <strong>full-screen interstitial ad</strong> when you open the Tools screen (rate-limited
-                so it appears at most once every 90 seconds). Advertising revenue helps support continued development
-                of the app. When AdMob is active, Google may collect the following device-level information to serve ads:
+                Vibe displays advertisements served by Google AdMob in three formats:
+                <strong>native ads</strong> embedded as cards within song, artist, and library lists;
+                <strong>banner ads</strong> within grid-based browse screens (albums, genres); and a
+                <strong>full-screen interstitial ad</strong> when you open the Tools screen (rate-limited
+                so it appears at most once every 90 seconds).
+                Native ads are styled to match the app's design but are always labelled with an
+                <strong>"Ad"</strong> badge and Google's AdChoices icon.
+                Advertising revenue helps support continued development of the app.
+                When AdMob is active, Google may collect the following device-level information to serve ads:
             </p>
             <ul class="prose-list">
                 <li>Android Advertising ID (GAID) — used to serve relevant ads and limit ad frequency</li>
